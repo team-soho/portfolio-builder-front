@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Builder Project (Work in Progress)
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+Craft your professional portfolio website without any coding required! Portfolio Builder offers an easy-to-use interface, theme customization, and seamless deployment on GitHub Pages.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Check out the live demo of Portfolio Builder: [Portfolio Builder Demo](https://ruccess.site)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Deploy Your Portfolio
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Select a Theme:**
 
-## Learn More
+    - Visit the Portfolio Builder website and Pick a theme that suits your style
 
-To learn more about Next.js, take a look at the following resources:
+2. **Input Your Information:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    - input your personal information, work experience, and portfolio details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. **Download Your Portfolio:**
 
-## Deploy on Vercel
+    - Download the dynamically generated static files in a zip format.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Deploy on GitHub Pages:**
+    - Follow the detailed instructions below to create your own website using the 'Deployment (Using GitHub Pages)' section.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Key Features
+
+-   Easy input of personal information, work experience, and portfolio details
+-   Dynamic generation of static HTML, CSS, and JS files
+-   Variety of themes to choose from
+-   Seamless deployment on GitHub Pages
+-   Portfolio data is stored in JSON format and included in the downloaded zip file.( Even if you're unfamiliar with JSON, don't worry! It's just a file to store information, and in this project, we don't keep or store it.)
+
+## Development Status
+
+The project is currently under development, and some parts may not be complete. Feedback and the development progress can be tracked through issues.
+
+## Development Environment
+
+  <img src="https://static.ruccess.site/team-soho.svg" />
+
+-   Frontend: [portfolio-builder-front](https://github.com/team-soho/portfolio-builder-front) (Developer: [yuuthod](https://github.com/yuuthod) )
+-   Backend: [portfolio-builder-back](https://github.com/team-soho/portfolio-builder-back) (Developer: [ruccess](https://github.com/ruccess) )
+
+## Deployment (Using GitHub Pages)
+
+1. **Create a Project Repository:**
+
+    - Click the "+" button on GitHub and select "New repository."
+    - Specify the repository name and choose the option to create a README file.
+
+2. **Upload the Project:**
+    - Navigate to the local project folder.
+    - Initialize the project with Git and link it to the GitHub Repository.
+    ```bash
+    git init
+    git add .
+    git commit -m "Initial commit"
+    git remote add origin <GitHub Repository URL>
+    git push -u origin master
+    ```
+3. **Configure GitHub Pages:**
+    - Go to the "Settings" tab on the GitHub Repository page.
+    - Scroll down to the "GitHub Pages" section, choose "Source," and configure it.
+    - Typically, select "master branch" or "main branch" and save.
+4. **Check the Website:**
+    - After configuring GitHub Pages, the deployed website can be checked after a few minutes.
+    - The address is the GitHub Pages URL, including the specified repository name.
+
+## Installation
+
+-   ```bash
+    $ yarn install
+    ```
+
+## Running the app
+
+-   ```bash
+    # dev mode
+    $ yarn run dev
+    ```
