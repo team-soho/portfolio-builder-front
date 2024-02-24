@@ -1,7 +1,10 @@
+import getThemeComponent from '@/themes';
+
 export default function ThemeType({
   params
 }: {
   params: { themeType: string };
 }) {
-  return <main>{params.themeType}</main>;
+  const DynamicThemeComponent = getThemeComponent(params.themeType);
+  return <DynamicThemeComponent />;
 }
