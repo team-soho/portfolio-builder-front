@@ -9,7 +9,6 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "airbnb",
-    "airbnb/hooks",
     "airbnb-typescript",
     "prettier",
     "plugin:prettier/recommended"
@@ -42,7 +41,7 @@
     "import/prefer-default-export": "off",
     "react/function-component-definition": [
       2,
-      { "namedcomponents": ["arrow-function", "function-declaration"] }
+      { "namedComponents": ["arrow-function", "function-declaration"] }
     ],
     // next와 출동하는 rule
     "react/react-in-jsx-scope": "off",
