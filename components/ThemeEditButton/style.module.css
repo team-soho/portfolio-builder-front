@@ -1,0 +1,78 @@
+.dropdown {
+  --bg-color: #222222;
+  --button-color: #fff;
+  --completed-color: #28f479;
+  --point-color: #f47128;
+  --close-dropdown-background: rgba(255, 255, 255, 0);
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: fit-content;
+  padding: 10px;
+  text-align: center;
+  border-radius: 3rem;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+.dropdown button {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 2px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.edit {
+  display: none;
+  margin-bottom: 10px;
+  background-color: var(--bg-color);
+}
+.completed {
+  background-color: var(--completed-color);
+}
+.completed:hover,
+.edit:hover {
+  background-color: var(--point-color);
+  transition: background ease 0.5s;
+}
+.button-list {
+  list-style: none;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+.button-list button {
+  margin-bottom: 10px;
+  background-color: var(--button-color);
+}
+.button-list button:hover {
+  background-color: var(--point-color);
+  transition: background ease 0.5s;
+}
+
+/* 버튼 드롭다운 효과 */
+.dropdown.open {
+  height: 330px;
+  background-color: var(--bg-color);
+  transition:
+    height 0.3s ease,
+    background 1s ease;
+}
+.dropdown.close {
+  height: 80px;
+  overflow: hidden;
+  transition:
+    height 0.3s ease,
+    background 1s ease;
+}
+.dropdown.close .edit {
+  display: block;
+  animation: dropdown-close-edit 1s ease forwards;
+}
+@keyframes dropdown-close-edit {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
