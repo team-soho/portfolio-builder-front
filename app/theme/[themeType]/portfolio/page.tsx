@@ -7,6 +7,9 @@ export default function ThemeType({
 }: {
   params: { themeType: string };
 }) {
-  const DynamicThemeComponent = getThemeComponent(params.themeType);
+  const DynamicThemeComponent = getThemeComponent(
+    params.themeType,
+    'portfolio'
+  );
   return <DynamicThemeComponent />;
 }

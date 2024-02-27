@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import { ComponentType } from 'react';
+import { type TPageNames } from './type';
 
 interface IThemeTypeConvert {
   [themeType: string]: string;
@@ -18,10 +19,27 @@ const themeTypeToComponentMap: IThemeTypeConvert = {
  * @param themeType 테마 타입 이름
  * @returns
  */
-const getThemeComponent = (themeType: string): ComponentType => {
+const getThemeComponent = (
+  themeType: string,
+  pageName?: TPageNames
+): ComponentType => {
   const themeComponentName = themeTypeToComponentMap[themeType] || 'Minimal';
-  return dynamic(() =>
-    import(`@/themes/${themeComponentName}`).then((mod) => mod.default)
+  if (pageName === 'portfolio') {
+    return dynamic(
+      () =>
+        import(`@/themes/${themeComponentName}/portfolio.tsx`).then(
+          (mod) => mod.default
+        ),
+      {
+        ssr: false
+      }
+    );
+  }
+  return dynamic(
+    () => import(`@/themes/${themeComponentName}`).then((mod) => mod.default),
+    {
+      ssr: false
+    }
   );
 };
 
