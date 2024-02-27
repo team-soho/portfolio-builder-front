@@ -7,18 +7,16 @@ import downloadIcon from '@/public/icons/download.svg';
 import stylusNoteIcons from '@/public/icons/stylus_note.svg';
 import palette from '@/public/icons/palette.svg';
 import cn from 'classnames';
-import { useState } from 'react';
+import { useEditorMode } from '@/providers/editorMode';
 import style from './style.module.css';
 
 export default function ThemeEditButton() {
-  const [isOpen, setIsOpen] = useState(true);
-  function handleClickDropdown(open: boolean) {
-    return () => setIsOpen(open);
-  }
+  const { editorMode, toggleEditorMode } = useEditorMode();
+  const handleClickDropdown = (open: boolean) => () => toggleEditorMode(open);
   return (
     <div
       role='button'
-      className={cn(style.dropdown, isOpen ? style.open : style.close)}
+      className={cn(style.dropdown, editorMode ? style.open : style.close)}
     >
       <button
         type='button'

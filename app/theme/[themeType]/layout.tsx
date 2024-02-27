@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ThemeEditButton from '@/components/ThemeEditButton';
+import { EditorModeProvider } from '@/providers/editorMode';
 
 export const metadata: Metadata = {
   title: 'Portfolio Builder',
@@ -12,9 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
+    <EditorModeProvider>
       {children}
       <ThemeEditButton />
-    </div>
+    </EditorModeProvider>
   );
 }
